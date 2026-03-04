@@ -1,0 +1,15 @@
+[profile.default]
+src = "src"
+out = "out"
+libs = ["lib"]
+
+# This PoC uses local mock contracts to simulate the vulnerability.
+# No mainnet fork required — runs entirely locally.
+#
+# The original attack occurred on Stellar (Blend Protocol).
+# This PoC simulates the oracle manipulation concept in an EVM environment.
+
+evm_version = "shanghai"
+
+[profile.default.fuzz]
+runs = 256
